@@ -1,0 +1,28 @@
+
+./Main.hs,693
+module Main Main0,1
+data Shell Shell7,8
+data Shell a = Shell Shell7,8
+instance instance9,10
+fromLiteral fromLiteral20,21
+fromLiteral fromLiteral21,22
+createConfigMap createConfigMap24,25
+createConfigMap createConfigMap25,26
+deleteConfigMap deleteConfigMap27,28
+createSecret createSecret29,30
+createSecret createSecret30,31
+deleteSecret deleteSecret32,33
+toProc toProc34,35
+toProc toProc35,36
+readShell readShell37,38
+readShell readShell38,39
+getNodePort getNodePort40,41
+getPort getPort41,42
+getUser getUser42,43
+getPassword getPassword43,44
+connInfoFromRelease connInfoFromRelease45,46
+connInfoFromRelease connInfoFromRelease46,47
+main main59,60
+
+./Setup.hs,15
+main main1,2
