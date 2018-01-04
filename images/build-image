@@ -1,0 +1,14 @@
+FROM alpine:edge
+
+RUN apk --update add ghc cabal postgresql-dev alpine-sdk linux-headers musl-dev gmp-dev zlib-dev
+
+RUN cabal update
+
+# Add just the .cabal file to capture dependencies
+COPY ./postgres-k8s-export.cabal /opt/server/postgres-k8s-export.cabal
+
+WORKDIR /opt/server
+# Docker will cache this command as a layer, freeing us up to
+# modify source code without re-installing dependencies
+# (unless the .cabal file changes!)
+RUN cabal install --only-dependencies -j4
